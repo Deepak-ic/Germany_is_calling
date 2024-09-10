@@ -49,8 +49,17 @@ public class POM {
 	// password alert
 	@FindBy(xpath = "//*[text()='Password: This field is required.']")
 	private WebElement passAlert;
+	
+	//username and password incorrect
+	@FindBy(xpath = "//*[contains(text(), 'Please enter a correct username and password')]")
+	private WebElement inCrtPassUsr;
 
+	
 	// Getters for the elements
+	public WebElement getInCrtPassUsr() {
+		return inCrtPassUsr;
+	}
+
 	public WebElement getUsrTxtBox() {
 		return usrTxtBox;
 	}
