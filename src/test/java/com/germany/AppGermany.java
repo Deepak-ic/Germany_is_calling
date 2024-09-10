@@ -105,6 +105,8 @@ public class AppGermany extends BaseClass {
 
 		SoftAssert s = new SoftAssert();
 //		validate landing page
+		boolean inCrt = g.getInCrtPassUsr().isDisplayed();
+		s.assertEquals(inCrt, true);
 		s.assertFalse(pageTitleMtch, "Page title does not match for Unsuccessful login");
 		s.assertAll();
 
